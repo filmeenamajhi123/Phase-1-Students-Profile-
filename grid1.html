@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout</title>
+
+  <style>
+
+   *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      background: rgb(50, 41, 59);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container{
+      height: 500px;
+      width: 900px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+    .box{
+        border-radius: 3px;
+        background: wheat;
+        margin: 5px;
+    }
+
+    .div1{
+        background: red;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+    .div2{
+        background: yellow;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .box4{
+        display: grid;
+        grid-row: 1/3;
+    }
+
+    .div3{
+        background: orange;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .div4{
+        background: gray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .div5{
+        background: green;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "box19 box19 box19 box20 box20 box20 box21 box21 box22 box22 box23 box23";
+    }
+    .box19{
+        display: grid;
+        grid-area: box19;
+        /* grid-column: 1/3; */
+    }
+     .box20{
+        display: grid;
+        grid-area: box20;
+        /* grid-column: 3/4; */
+    }
+
+    .div6{
+        background: pink;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .box24{
+        display: grid;
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    .div7{
+        background: blue;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .box30{
+        display: grid;
+        grid-row: 1/4;
+    }
+    .box34{
+        display: grid;
+        grid-row: 3/4;
+    }
+
+    .div8{
+        background: blueviolet;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .div9{
+        background: white;
+              display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+   
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+<div class="div1">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+</div>
+<div class="div2">
+
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+    <div class="box box6">6</div>
+</div>
+<div class="div3">
+
+    <div class="box box7">7</div>
+    <div class="box box8">8</div>
+    <div class="box box9">9</div>
+    <div class="box box10">10</div>
+    <div class="box box11">11</div>
+    <div class="box box12">12</div>
+</div>
+
+<div class="div4">
+
+    <div class="box box13">13</div>
+    <div class="box box14">14</div>
+    <div class="box box15">15</div>
+    <div class="box box16">16</div>
+    <div class="box box17">17</div>
+    <div class="box box18">18</div>
+</div>
+<div class="div5">
+
+    <div class="box box19">19</div>
+    <div class="box box20">20</div>
+    <div class="box box21">21</div>
+    <div class="box box22">22</div>
+    <div class="box box23">23</div>
+</div>
+<div class="div6">
+
+    <div class="box box24">24</div>
+    <div class="box box25">25</div>
+    <div class="box box26">26</div>
+    <div class="box box27">27</div>
+    <div class="box box28">28</div>
+    <div class="box box29">29</div>
+</div>
+<div class="div7">
+
+    <div class="box box30">30</div>
+    <div class="box box31">31</div>
+    <div class="box box32">32</div>
+    <div class="box box33">33</div>
+    <div class="box box34">34</div>
+</div>
+<div class="div8">
+
+    <div class="box box35">35</div>
+    <div class="box box36">36</div>
+    <div class="box box37">37</div>
+    <div class="box box38">38</div>
+    <div class="box box39">39</div>
+    <div class="box box40">40</div>
+    <div class="box box9">41</div>
+</div>
+<div class="div9">
+
+    <div class="box box7">42</div>
+    <div class="box box8">43</div>
+    <div class="box box9">44</div>
+    <div class="box box7">45</div>
+    <div class="box box8">46</div>
+    <div class="box box9">47</div>
+    <div class="box box9">48</div>
+    <div class="box box7">49</div>
+    <div class="box box8">50</div>
+    <div class="box box9">51</div>
+</div>
+  </div>
+  </body>
+</html> 
